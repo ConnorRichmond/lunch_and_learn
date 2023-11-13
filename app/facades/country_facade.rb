@@ -7,6 +7,16 @@ class CountryFacade
     country[:name][:common]
   end
 
+  def search_country_lat_long(country)
+    json = service.search_country_lat_long(country)
+
+    if json.first[:capitalInfo].empty?
+      json.first[:latlng]
+    else
+      json.first[:capitalInfo][:latlng]
+    end
+  end
+
   private
 
   def service

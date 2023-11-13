@@ -17,4 +17,8 @@ class CountryService
   def capital(query)
     get_url("/v3.1/capital/#{query}")
   end
+
+  def search_country_lat_long(country)
+    get_url("/v3.1/name/#{country}")
+  end
 end
