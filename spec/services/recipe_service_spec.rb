@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe RecipeService do
   describe "instance methods" do
-    describe "#search_by_country" do
+    describe "search country" do
       it "returns country data by search" do
         VCR.use_cassette("thailand_recipe_search") do
           response = RecipeService.new.search_by_country("thailand")

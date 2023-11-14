@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe CountryService do
   describe "instance methods" do
-    describe "#random_country" do
+    describe "random country" do
       it "returns all country data" do
         VCR.use_cassette("random_country") do
           response = CountryService.new.random_country
