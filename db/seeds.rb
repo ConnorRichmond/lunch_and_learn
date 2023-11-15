@@ -9,7 +9,7 @@ user2 = User.create(
   name: "user2",
   email: "user2@gmail.com",
   password: "1234",
-  api_key: "1234"
+  api_key: "4321"
 )
 
 user.favorites.create(
