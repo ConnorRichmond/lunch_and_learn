@@ -87,4 +87,7 @@ VCR.configure do |config|
   config.filter_sensitive_data("edamame_api_key") {
     Rails.application.credentials.edamam[:key]
   }
+  config.filter_sensitive_data("places_api_key") {
+    Rails.application.credentials.places[:key]
+  }
 end
