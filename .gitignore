@@ -32,5 +32,11 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+<<<<<<< HEAD
 /coverage
 /spec/fixtures
+=======
+
+/coverage
+/spec/fixtures
+>>>>>>> 2e545ab74bb2786bff40552cd029146e6534219a
