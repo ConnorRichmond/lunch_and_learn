@@ -71,13 +71,6 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    with.test_framework :rspec
-    with.library :rails
-  end
-end
-
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
@@ -86,5 +79,12 @@ VCR.configure do |config|
   }
   config.filter_sensitive_data("edamame_api_key") {
     Rails.application.credentials.edamam[:key]
+  }
+  config.filter_sensitive_data("youtube_api_key") {
+    Rails.application.credentials.youtube[:key]
+  }
+
+  config.filter_sensitive_data("unsplash_api_key") {
+    Rails.application.credentials.unsplash[:key]
   }
 end
